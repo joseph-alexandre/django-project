@@ -1,6 +1,13 @@
 <html>
 <head>
     <title>Meu site aí</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+        .joseph {
+        height: 64px;
+        width: 64px;
+        }
+    </style>
 </head>
 <body>
 <div>
@@ -8,33 +15,45 @@
         BLOG DO JOSEPH EM DJANGO
     </h1>
 </div>
-<div>
-    <h2>
-    Escrevi e saí correndo
-    </h2>
-    <p>
-        Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-    </p>
-    <p>Publicado: 31.12.2018, 00:50</p>
+<br>
+<br>
+<div class="media">
+  <img class="align-self-start mr-3 joseph" src="https://scontent.fbnu1-1.fna.fbcdn.net/v/t1.0-9/20294268_1617076661721703_4976915884075446818_n.jpg?_nc_cat=111&_nc_ht=scontent.fbnu1-1.fna&oh=3e80d78be715c586c3933899485f9daf&oe=5C8C01F4" alt="Generic placeholder image">
+  <div class="media-body">
+    <h5 class="mt-0">Escrevi e saí correndo</h5>
+    <p>        Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+</p>
+    <p>publicado em: Publicado: 31.12.2018, 00:50 por {{ post.author }}</p>
+  </div>
+</div>
+<div class="media">
+  <img class="align-self-start mr-3 joseph" src="https://scontent.fbnu1-1.fna.fbcdn.net/v/t1.0-9/20294268_1617076661721703_4976915884075446818_n.jpg?_nc_cat=111&_nc_ht=scontent.fbnu1-1.fna&oh=3e80d78be715c586c3933899485f9daf&oe=5C8C01F4" alt="Generic placeholder image">
+  <div class="media-body">
+    <h5 class="mt-0">Comi o cu de quem tá lendo</h5>
+    <p>        Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+</p>
+    <p>publicado em: Publicado: 31.12.2018, 00:52 por {{ post.author }}</p>
+  </div>
 </div>
 
-<div>
-    <h2>
-    Comi o cu de quem tá lendo
-    </h2>
-    <p>
-        Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-    </p>
-    <p>Publicado: 31.12.2018, 00:52</p>
-</div>
 
+<!--{% for post in posts %}-->
+    <!--<div>-->
+        <!--<h1>{{ post.title }}</a></h1>-->
+        <!--<p>{{ post.text|linebreaksbr }}</p>-->
+        <!--<p>publicado em: {{ post.published_date }}</p>-->
+
+    <!--</div>-->
+<!--{% endfor %}-->
 {% for post in posts %}
-    <div>
-        <h1>{{ post.title }}</a></h1>
-        <p>{{ post.text|linebreaksbr }}</p>
-        <p>publicado em: {{ post.published_date }}</p>
-
-    </div>
+<div class="media">
+  <img class="align-self-start mr-3 joseph" src="https://scontent.fbnu1-1.fna.fbcdn.net/v/t1.0-9/20294268_1617076661721703_4976915884075446818_n.jpg?_nc_cat=111&_nc_ht=scontent.fbnu1-1.fna&oh=3e80d78be715c586c3933899485f9daf&oe=5C8C01F4" alt="Generic placeholder image">
+  <div class="media-body">
+    <h5 class="mt-0">{{ post.title }}</h5>
+    <p>{{ post.text|linebreaksbr }}</p>
+    <p>publicado em: {{ post.published_date }} por {{ post.author }}</p>
+  </div>
+</div>
 {% endfor %}
 </body>
 </html>
