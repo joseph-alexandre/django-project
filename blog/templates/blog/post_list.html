@@ -1,81 +1,70 @@
 <html>
 <head>
     <title>Meu site aí</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
     <style>
         .joseph {
         height: 64px;
         width: 64px;
         }
+
     </style>
 </head>
-<body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Crow_Digital_Logo_SVG.svg/2000px-Crow_Digital_Logo_SVG.svg.png" width="45" height="45" alt=""> <b>Helgardh</b></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="/test">Test <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand">&nbsp<img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Crow_Digital_Logo_SVG.svg/2000px-Crow_Digital_Logo_SVG.svg.png"
+                width="50" height="50" alt=""> <h6><b>Helgardh</b></h6></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-      <span class="navbar-text">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/test">Test <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+            <span class="navbar-text">
             Blog do Joseph feito em Django
     </span>
-  </div>
-</nav>
-
-
-
-<br>
-<br>
-<div class="media">
-  <img class="align-self-start mr-3 joseph" src="https://scontent.fbnu1-1.fna.fbcdn.net/v/t1.0-9/20294268_1617076661721703_4976915884075446818_n.jpg?_nc_cat=111&_nc_ht=scontent.fbnu1-1.fna&oh=3e80d78be715c586c3933899485f9daf&oe=5C8C01F4" alt="Generic placeholder image">
-  <div class="media-body">
-    <h5 class="mt-0">Escrevi e saí correndo</h5>
-    <p>        Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-</p>
-    <p>publicado em: Publicado: 31.12.2018, 00:50 por {{ post.author }}</p>
-  </div>
-</div>
-<div class="media">
-  <img class="align-self-start mr-3 joseph" src="https://scontent.fbnu1-1.fna.fbcdn.net/v/t1.0-9/20294268_1617076661721703_4976915884075446818_n.jpg?_nc_cat=111&_nc_ht=scontent.fbnu1-1.fna&oh=3e80d78be715c586c3933899485f9daf&oe=5C8C01F4" alt="Generic placeholder image">
-  <div class="media-body">
-    <h5 class="mt-0">Comi o cu de quem tá lendo</h5>
-    <p>        Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-</p>
-    <p>publicado em: Publicado: 31.12.2018, 00:52 por {{ post.author }}</p>
-  </div>
+        </div>
+    </nav>
 </div>
 
+    <br>
+    <br>
 
-<!--{% for post in posts %}-->
-    <!--<div>-->
-        <!--<h1>{{ post.title }}</a></h1>-->
-        <!--<p>{{ post.text|linebreaksbr }}</p>-->
-        <!--<p>publicado em: {{ post.published_date }}</p>-->
-
-    <!--</div>-->
-<!--{% endfor %}-->
-{% for post in posts %}
-<div class="media">
-  <img class="align-self-start mr-3 joseph" src="https://scontent.fbnu1-1.fna.fbcdn.net/v/t1.0-9/20294268_1617076661721703_4976915884075446818_n.jpg?_nc_cat=111&_nc_ht=scontent.fbnu1-1.fna&oh=3e80d78be715c586c3933899485f9daf&oe=5C8C01F4" alt="Generic placeholder image">
-  <div class="media-body">
-    <h5 class="mt-0">{{ post.title }}</h5>
-    <p>{{ post.text|linebreaksbr }}</p>
-    <p>publicado em: {{ post.published_date }} por {{ post.author }}</p>
-  </div>
+<div class="container">
+    {% for post in posts %}
+    <div class="media">
+        <img class="align-self-start mr-3 joseph"
+             src="https://scontent.fbnu1-1.fna.fbcdn.net/v/t1.0-9/20294268_1617076661721703_4976915884075446818_n.jpg?_nc_cat=111&_nc_ht=scontent.fbnu1-1.fna&oh=3e80d78be715c586c3933899485f9daf&oe=5C8C01F4"
+        >
+        <div class="media-body">
+            <h5 class="mt-0">{{ post.title }}</h5>
+            <p>{{ post.text|linebreaksbr }}</p>
+            <p>Publicado em {{ post.published_date }} por {{ post.author }}</p>
+        </div>
+    </div>
+    {% endfor %}
 </div>
-{% endfor %}
+
 </body>
 </html>
